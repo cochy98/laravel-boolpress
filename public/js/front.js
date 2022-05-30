@@ -18504,7 +18504,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'about-us',
     component: _pages_About_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
-    path: '/not-found',
+    path: '*',
     name: 'not-found',
     component: _pages_NotFound_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }

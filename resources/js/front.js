@@ -27,11 +27,13 @@ const router = new VueRouter({
       name: 'about-us',
       component: About
     },
+
     {
-      path: '/not-found',
+      path: '*',
       name: 'not-found',
       component: NotFound
-    },
+    }
+
     /* {
       path: '/show',
       name: 'show',
