@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import Post from "./Post";
+import Post from "../components/Post.vue";
 export default {
   name: "PostList",
   components: {

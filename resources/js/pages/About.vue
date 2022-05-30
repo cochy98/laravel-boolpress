@@ -1,11 +1,9 @@
 <template>
-  <h1>home</h1>
+  <h1 class="text-center p-5">About</h1>
 </template>
 
 <script>
-export default {
-  name: "NotFound",
-};
+export default {};
 </script>
 
 <style>

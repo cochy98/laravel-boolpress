@@ -50,20 +50,12 @@ export default {
       navItems: [
         {
           label: "Home",
-          routeName: "home",
-        },
-        /* {
-          label: "Posts",
-          routeName: "posts",
+          routeName: "post-list",
         },
         {
           label: "About us",
           routeName: "about-us",
         },
-        {
-          label: "Contact us",
-          routeName: "contact",
-        }, */
       ],
     };
   },

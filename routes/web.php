@@ -32,4 +32,6 @@ Route::middleware('auth')
 
 //Route::middleware('guest')->get('/', 'Guest\HomeController@index');
 // # tutte le altre rotte -> reindirizzale alla home dei guest
-Route::get('/{any}', 'Guest\HomeController@index')->where('any', '.*');
+Route::get('{any?}', function () {
+    return view('guest.home');
+})->where('any', '.*');
