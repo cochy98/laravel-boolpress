@@ -19,8 +19,8 @@
                     <input type="text" name="image_url" id="image_url" class="form-control" placeholder="Immagine URL del post">
                 </div> --}}
                 <div class="mb-3">
-                    <label for="image_url">Immagine post</label>
-                    <input type="file" name="image_url" id="image_url" class="form-control" placeholder="Immagine URL del post">
+                    <label for="image">Immagine post</label>
+                    <input type="file" name="image" id="image" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="category_id">Categoria</label>

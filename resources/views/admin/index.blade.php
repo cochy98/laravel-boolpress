@@ -25,7 +25,12 @@
               <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
             </form>
           </div>
-          <img src="{{ $post->image_url }}" alt="Picture of {{ $post->title }}" class="my-card-img">
+          @if (str_starts_with($post->image_url, 'http'))
+            <img src="{{ $post->image_url }}" alt="Picture of {{ $post->title }}" class="my-card-img">
+          @else
+            <img src="{{ asset('storage'.'/'. $post->image_url) }}" 
+                alt="Picture of {{ $post->title }}" class="my-card-img">
+          @endif
           <div class="my-card-content">
             <div class="my-card-body">
               <div class="my-card-header">

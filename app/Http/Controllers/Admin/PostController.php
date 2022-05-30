@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -51,7 +52,10 @@ class PostController extends Controller
         $post->title = $data['title'];
         $post->author = Auth::user()->name;
         $post->content = $data['content'];
-        $post->image_url = $data['image_url'];
+        // $post->image_url = $data['image_url'];
+        // ?Faccio l'upload dell'immagine nella cartella 'uploads', sotto il percorso 'public/resources'
+        // ? Aggiungo alla colonna 'image_url' il percorso dell'immagine uplodata
+        $post->image_url = Storage::put('uploads', $data['image']);
         $post->slug = Str::slug($data['title'], '-');
         $post->save();
 
@@ -98,7 +102,7 @@ class PostController extends Controller
         $post->title = $data['title'];
         $post->author = Auth::user()->name;
         $post->content = $data['content'];
-        $post->image_url = $data['image_url'];
+        $post->image_url = Storage::put('uploads', $data['image']);
         $post->slug = Str::slug($data['title'], '-');
         $post->save();
 
