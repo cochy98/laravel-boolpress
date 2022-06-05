@@ -30,6 +30,10 @@ Route::middleware('auth')
         Route::resource('posts', 'PostController');
     });
 
+Route::get('/contacts', 'Guest\ContactController@contact')->name('guest.contacts');
+Route::post('/contacts', 'Guest\ContactController@sendEmail')->name('guest.storeContact');
+Route::get('/thanks', 'Guest\ContactController@thanks')->name('guest.thanks');
+
 //Route::middleware('guest')->get('/', 'Guest\HomeController@index');
 // # tutte le altre rotte -> reindirizzale alla home dei guest
 Route::get('{any?}', function () {

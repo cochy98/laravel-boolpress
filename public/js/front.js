@@ -1952,6 +1952,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   data: function data() {
@@ -2674,33 +2677,37 @@ var render = function () {
             _c(
               "ul",
               { staticClass: "navbar-nav me-auto mb-2 mb-lg-0" },
-              _vm._l(_vm.navItems, function (navItem, index) {
-                return _c(
-                  "li",
-                  { key: index, staticClass: "nav-item me-1" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link active",
-                        attrs: { to: { name: navItem.routeName } },
-                      },
-                      [
-                        _vm._v(
-                          "\n              " +
-                            _vm._s(navItem.label) +
-                            "\n            "
-                        ),
-                      ]
-                    ),
-                  ],
-                  1
-                )
-              }),
-              0
+              [
+                _vm._l(_vm.navItems, function (navItem, index) {
+                  return _c(
+                    "li",
+                    { key: index, staticClass: "nav-item me-1" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link active",
+                          attrs: { to: { name: navItem.routeName } },
+                        },
+                        [
+                          _vm._v(
+                            "\n              " +
+                              _vm._s(navItem.label) +
+                              "\n            "
+                          ),
+                        ]
+                      ),
+                    ],
+                    1
+                  )
+                }),
+                _vm._v(" "),
+                _vm._m(1),
+              ],
+              2
             ),
             _vm._v(" "),
-            _vm._m(1),
+            _vm._m(2),
           ]
         ),
       ]),
@@ -2727,6 +2734,18 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item ms-auto" }, [
+      _c(
+        "a",
+        { staticClass: "nav-link active", attrs: { href: "/contacts" } },
+        [_vm._v("Contattaci")]
+      ),
+    ])
   },
   function () {
     var _vm = this

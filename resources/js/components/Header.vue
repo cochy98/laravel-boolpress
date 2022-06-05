@@ -28,6 +28,9 @@
                 {{ navItem.label }}
               </router-link>
             </li>
+            <li class="nav-item ms-auto">
+              <a class="nav-link active" href="/contacts">Contattaci</a>
+            </li>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item ms-auto">
