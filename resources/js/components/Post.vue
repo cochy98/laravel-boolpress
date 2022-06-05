@@ -24,7 +24,9 @@
           :style="{ 'background-color': category.colour }"
           >{{ category.name }}</span
         >
-        <a href="#">Leggi di piu...</a>
+        <router-link :to="{ name: 'post', params: { id: post.id } }">
+          Leggi di piu...
+        </router-link>
       </div>
     </div>
   </div>

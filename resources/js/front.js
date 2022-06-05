@@ -9,6 +9,7 @@ window.Vue.use(VueRouter);
 
 // ? Importo tutte le pagine del front-office che andrò a gestire con le rotte vue
 import PostList from "./pages/PostList.vue";
+import SinglePost from "./pages/SinglePost.vue";
 import NotFound from "./pages/NotFound.vue";
 import About from "./pages/About.vue";
 
@@ -28,15 +29,15 @@ const router = new VueRouter({
       component: About
     },
     {
+      path: '/post/:id',
+      name: 'post',
+      component: SinglePost
+    },
+    {
       path: '*',
       name: 'not-found',
       component: NotFound
     },
-    /* {
-      path: '/show',
-      name: 'show',
-      component: 'ShowPost'
-    } */
   ]
 });
 
